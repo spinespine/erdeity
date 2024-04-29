@@ -381,11 +381,15 @@ const MyERD = ( {me, funcs, index} ) => {
   const JSONdata = () => {
     const data = JSON.stringify(me, undefined, 2)
     const newData = data.split('\n')
-    return newData.map((str, i) => {
-      if (str.includes('"interval": ')) return
-        return <pre key={i}><p key={i}><code key={i} className='JSON'>{str + '\n'}</code></p></pre>
-      } 
-    )
+    return (
+      <div className='ERDinfo'>
+      {newData.map((str, i) => {
+        if (str.includes('"interval": ')) return
+          return <pre key={i}><p key={i}><code key={i} className='JSON'>{str + '\n'}</code></p></pre>
+        } 
+      )}
+      </div>
+  )
   }
   const ElementData = () => {
     const [JSONshown, setJSONshown] = useState(false)
