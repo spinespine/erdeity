@@ -374,6 +374,16 @@ div.page {
   padding-right: 20px;
 }
 
+div.namerContainer {
+  display: flex;
+  align-items: center;
+  max-height: min-content;
+}
+img.pencil {
+  height: 30px;
+  opacity: 50%;
+  transform: translateY(5px);
+}
 input#tabNamer {
   font-size: xx-large;
   background-color: #00000000;
@@ -513,7 +523,7 @@ p.finePrint {
     top: 120px;
   }
   input#tabNamer {
-    max-width: calc(100% - 6px);
+    max-width: calc(100% - 36px);
   }
 }
 

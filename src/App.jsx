@@ -6,6 +6,7 @@ import x from './assets/x.png'
 import check from './assets/check.png'
 import plus from './assets/plus.png'
 import up from './assets/up.png'
+import pencil from './assets/pencil.png'
 
 class tab {
   constructor () {
@@ -285,7 +286,12 @@ const MyGUI = ( {erds, funcs, data} ) => {
         </div>
       </div>
       <div className='page'>
-        <input type='text' onChange={funcs.nameTab} onBlur={handleEmptyTabName} id='tabNamer' placeholder='Tab Name' maxLength={32}/>
+        <div className='namerContainer'>
+          <img src={pencil} className='pencil'/>
+          <input type='text' onChange={funcs.nameTab} onBlur={handleEmptyTabName} id='tabNamer' placeholder='Tab Name' maxLength={32}/>
+        </div>
+
+
         <div className='saveWorkspace' onClick={saveWorkspace}>Save Workspace</div>
         <Results />
         <div className='saveGUI' onClick={save}>Save GUI</div>
