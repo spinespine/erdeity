@@ -140,7 +140,7 @@ function App() {
         <div id='labelContainer'>
           <label htmlFor='fileInput' id='label'>
             <img src={uploadIcon} className='uploadIcon'/>
-            Upload JSON or ERDeity file
+            Upload JSON definitions or ERDeity file
           </label>
         </div>
         <input type='file' onChange={handleUpload} id='fileInput'/>
