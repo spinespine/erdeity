@@ -290,7 +290,6 @@ div#MyGUI {
   min-width: 400px;
   border: 1px solid gray;
   padding-bottom: 10px;
-  position: relative;
 }
 div#MyGUI::-webkit-scrollbar {
   display: none;
@@ -404,11 +403,11 @@ div.saveWorkspace {
   color: white;
   font-weight: bold;
   float: right;
-  transform: translateY(-40px);
   position: absolute;
   right: 20px;
   z-index: 0;
   box-sizing: border-box;
+  top: 20px;
 }
 
 p.finePrint {
@@ -480,16 +479,18 @@ p.finePrint {
   }
 }
 @media (max-width: 420px) {
+  div#main {
+    margin-top: 50px;
+  }
   div#ERDlist, div#MyGUI {
     min-width: 0px;
   }
   div.saveWorkspace {
-    position: relative;
-    float: none;
-    right: unset;
-    transform: none;
-    margin-top: 10px;
-    z-index: -1;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 120px;
   }
   input#tabNamer {
     max-width: calc(100% - 6px);
